@@ -1,149 +1,89 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Juan Cruz</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      background: #18181b;
+      color: #e5e7eb;
+    }
+    h1, h2, h3 {
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 1px;
+    }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">Juan</div>
-      <ul class="nav-links">
-        <li><a href="#presentacion">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+<body class="bg-neutral-900 text-gray-100">
+  <header class="w-full bg-neutral-950 text-green-400 border-b border-green-700">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <span class="text-xl font-bold tracking-widest text-green-400">JuanCruz.dev</span>
+      <nav>
+        <ul class="flex items-center gap-6 font-mono font-bold">
+          <li>Inicio</li>
+          <li>Proyectos</li>
+          <li>Experiencia</li>
+          <li>Habilidades</li>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+    </div>
   </header>
+  <div class="h-16"></div>
 
-  <main class="container">
+  <section class="max-w-6xl mx-auto px-6 py-14">
+    <h1 class="text-4xl font-extrabold text-green-400 tracking-wide">Juan Cruz Portfolio</h1>
+    <p class="mt-4 text-lg text-gray-300 font-mono">
+      Desarollador Full Stack  en formación | UTN Paraná.
+    </p>
+  </section>
 
-  
-    <section id="presentacion" class="presentacion">
-      <div class="perfil">
-        <img src="img/foto-perfil.jpg" alt="Foto de Juan Cruz">
-      </div>
-      <div class="texto-presentacion">
-        <h1>¡Hola! Soy Juan Cruz</h1>
-        <h2>Estudiante de Desarrollo Web Full Stack</h2>
-        <p>Estoy cursando el último cuatrimestre de la carrera de Técnico en Programación en la UTN de Paraná. Me apasiona crear sitios modernos y funcionales, combinando creatividad con código. Este portfolio refleja mi recorrido como desarrollador y los proyectos que realicé durante la carrera.</p>
-        <p>Además de mis estudios, trabajo en la empresa de mi familia, llamada PROCLOR. Nos dedicamos a la venta y distribución de productos para la limpieza e higiene del hogar y piscinas en la ciudad de Paraná.</p>
-        <a href="#proyectos" class="boton">Ver Proyectos</a>
-      </div>
-    </section>
+  <section id="presentacion" class="py-12 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-400">Presentación</h2>
+    <p class="mt-4 text-gray-300">
+     Descripción sobre mí
+    </p>
+  </section>
 
+  <section id="proyectos" class="py-12 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-400">Proyectos</h2>
+    <p class="mt-4 text-gray-300">Lista de proyectos.</p>
+  </section>
 
-    <section id="proyectos" class="proyectos">
-      <h2>Proyectos</h2>
-      <div class="grid-proyectos">
+  <section id="experiencia" class="py-12 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-400">Experiencia</h2>
+    <ul class="mt-4 text-gray-300">
+      <li>Trabajo </li>
+      <li>Estudios</li>
+    </ul>
+  </section>
 
-        <article class="proyecto">
-          <img src="img/CapturaTarjetaPers.png" height="160" width="220" alt="Proyecto Tarjeta de Presentación">
-          <h3>Tarjeta de Presentación Personal</h3>
-          <p>Tarjeta de presentación personal hecha con HTML y CSS. Trabajo práctico para un curso de desarrollo web Fullstack.</p>
-          <a href="https://juanosuna02.github.io/Mi-Presentacion/" target="_blank">Ver online</a>
-        </article>
+  <section id="habilidades" class="py-12 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-400">Habilidades</h2>
+    <ul class="mt-4 text-gray-300">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
 
-        <article class="proyecto">
-          <img src="img/CapturaRestaurante.png" height="160" width="220" alt="Proyecto Menú de Restaurante">
-          <h3>Menú de Restaurante</h3>
-          <p>Página con menú de platos y precios usando estructuras básicas de HTML y CSS.</p>
-          <a href="https://juanosuna02.github.io/Menu-de-mi-restaurante/" target="_blank">Ver online</a>
-        </article>
+  <section id="contacto" class="py-12 max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-400">Contacto</h2>
+    <form id="formulario" class="mt-4">
+      <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100" />
+      <input id="email" name="email" type="email" placeholder="Email" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100" />
+      <textarea id="mensaje" name="mensaje" rows="3" placeholder="Mensaje" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100"></textarea>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2">Enviar</button>
+    </form>
+  </section>
 
-        <article class="proyecto">
-          <img src="img/CapturaFlex.png" height="160" width="220" alt="Proyecto Flexbox Clon">
-          <h3>Flexbox Clon: Easy Design Services</h3>
-          <p>Landing page profesional replicada usando HTML, CSS y Flexbox, como trabajo práctico N°3 del curso Fullstack.</p>
-          <a href="https://juanosuna02.github.io/tp3-flexbox-clon/" target="_blank">Ver online</a>
-        </article>
-
-      </div>
-    </section>
-
-   
-    <section id="experiencia" class="experiencia">
-      <h2>Experiencia</h2>
-      <ul>
-        <li>
-          <strong>PROCLOR</strong> – Encargado de entregas y logística (2019 - Actualidad)<br>
-          Me encargo de repartir pedidos, gestionar entregas y realizar licitaciones para organismos como la municipalidad.
-        </li>
-        <li>
-          <strong>Curso de Desarrollo Web Full Stack</strong> – Práctica intensiva (2024 - Presente)<br>
-          Desarrollo de aplicaciones web completas, desde frontend hasta backend, con APIs y bases de datos.
-        </li>
-        <li>
-          <strong>UTN Paraná</strong> – Técnico en Programación (2023 - Presente)<br>
-          Formación universitaria en programación, estructuras de datos, bases de datos y metodologías ágiles.
-        </li>
-      </ul>
-    </section>
-
-
-    <section id="habilidades" class="habilidades">
-      <h2>Habilidades</h2>
-      <div class="lista-habilidades">
-        <div>
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Herramientas</h3>
-          <ul>
-            <li>Git & GitHub</li>
-            <li>VSCode</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Trabajo en equipo</li>
-            <li>Comunicación</li>
-            <li>Resolución de problemas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
-
-
-  <footer>
-    <div class="footer-content">
-      <p>© 2025 Juan Cruz Fernandez Osuna - Todos los derechos reservados.</p>
-      <div class="redes">
-        <a href="https://github.com/JuanOsuna02" target="_blank">GitHub</a>
-        <a href="cv.pdf" download>Descargar CV</a>
-      </div>
+  <footer class="mt-20 border-t border-green-700 bg-neutral-950 text-green-400">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-center">
+      <p class="text-green-400 text-sm">© 2025 Juan Cruz Fernandez Osuna</p>
     </div>
   </footer>
-
 </body>
-</html>
-
