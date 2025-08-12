@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         boton.classList.remove("bg-green-600", "hover:bg-green-700");
         boton.classList.add("bg-red-600", "hover:bg-red-700");
-        alert("Revisá estos campos:\n" + errores.join("\n"));
+        alert(" ¡ERROR! Revisá estos campos:\n" + errores.join("\n"));
         form.scrollIntoView({ behavior: "smooth" });
       } else {
         e.preventDefault();
         boton.classList.remove("bg-red-600", "hover:bg-red-700");
         boton.classList.add("bg-green-600", "hover:bg-green-700");
-        alert("¡Mensaje enviado! (Simulado)");
+        alert("¡Mensaje enviado! (Simulacion)");
         form.reset();
         form.scrollIntoView({ behavior: "smooth" });
       }
