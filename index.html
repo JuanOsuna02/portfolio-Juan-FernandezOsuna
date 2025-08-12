@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Space Grotesk', Arial, sans-serif;
-      background: #18181b;
+      background: linear-gradient(120deg, #18181b 0%, #23272f 100%);
       color: #e5e7eb;
     }
     h1, h2, h3 {
@@ -19,71 +19,197 @@
 </head>
 
 <body class="bg-neutral-900 text-gray-100">
-  <header class="w-full bg-neutral-950 text-green-400 border-b border-green-700">
+  <header class="fixed top-0 left-0 w-full bg-neutral-950/90 backdrop-blur-lg text-green-400 shadow z-50 border-b border-green-700">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <span class="text-xl font-bold tracking-widest text-green-400">JuanCruz.dev</span>
+      <a href="#presentacion" class="text-xl font-bold tracking-widest text-green-400 hover:text-white transition">
+        JuanCruz.dev
+      </a>
       <nav>
         <ul class="flex items-center gap-6 font-mono font-bold">
-          <li>Inicio</li>
-          <li>Proyectos</li>
-          <li>Experiencia</li>
-          <li>Habilidades</li>
-          <li>Contacto</li>
+          <li><a href="#presentacion" class="hover:text-white transition">Inicio</a></li>
+          <li><a href="#proyectos" class="hover:text-white transition">Proyectos</a></li>
+          <li><a href="#experiencia" class="hover:text-white transition">Experiencia</a></li>
+          <li><a href="#habilidades" class="hover:text-white transition">Habilidades</a></li>
+          <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="h-16"></div>
+  <div style="height: 4rem;"></div>
 
-  <section class="max-w-6xl mx-auto px-6 py-14">
-    <h1 class="text-4xl font-extrabold text-green-400 tracking-wide">Juan Cruz Portfolio</h1>
-    <p class="mt-4 text-lg text-gray-300 font-mono">
-      Desarollador Full Stack  en formación | UTN Paraná.
-    </p>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0" style="z-index:-10;">
+      <svg width="100%" height="100%" viewBox="0 0 1440 320" class="absolute top-0 left-0 w-full h-40">
+        <polygon points="0,0 1440,0 1440,120 0,320" fill="#22c55e" opacity="0.08"/>
+        <polygon points="0,80 1440,0 1440,160 0,320" fill="#22d3ee" opacity="0.04"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 py-14">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-lg bg-green-600 text-white font-bold text-2xl shadow-lg border-4 border-green-400">J</span>
+        <h1 class="text-4xl font-extrabold text-green-400 tracking-wide">Juan Cruz Portfolio</h1>
+      </div>
+      <p class="mt-4 text-lg text-gray-300 font-mono">
+        Desarrolador Full Stack  en formación | UTN Paraná.<br>
+      </p>
+    </div>
   </section>
 
-  <section id="presentacion" class="py-12 max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-400">Presentación</h2>
-    <p class="mt-4 text-gray-300">
-     Descripción sobre mí
-    </p>
+  <section id="presentacion" class="py-12 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="rounded-xl bg-neutral-800/90 shadow-lg p-8 border-2 border-green-600">
+      <h2 class="text-3xl font-bold text-green-400">¡Hola! Soy Juan Cruz</h2>
+      <p class="mt-2 text-lg text-green-300 font-semibold">Estudiante de Desarrollo Web Full Stack</p>
+      <p class="mt-4 text-gray-300">
+        Estoy cursando el último cuatrimestre de Técnico en Programación en la UTN de Paraná. Me gusta crear páginas modernas y funcionales, combinando creatividad con código. Además, trabajo en <strong>PROCLOR</strong>, la empresa de mi familia, dedicada a la venta de productos para limpieza e higiene del hogar y piscinas. Coordino entregas y licitaciones para venderle a organismos públicos y/o privados de la ciudad de Parana.
+      </p>
+      <a href="#proyectos"
+        class="inline-flex mt-6 items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-bold shadow hover:bg-green-700 transition-transform hover:scale-105">
+        Ver mis proyectos
+      </a>
+    </div>
+    <div>
+      <img src="img/FotoPefil.jpeg" alt="Foto de Juan Cruz"
+        class="w-full max-w-sm mx-auto rounded-lg shadow-lg ring-4 ring-green-400 hover:scale-105 transition" />
+    </div>
   </section>
 
   <section id="proyectos" class="py-12 max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-400">Proyectos</h2>
-    <p class="mt-4 text-gray-300">Lista de proyectos.</p>
+    <h2 class="text-center text-3xl font-bold text-green-400">Proyectos</h2>
+    <p class="text-center text-green-300 mt-2 font-mono">Algunos trabajos realizados.</p>
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="group flex flex-col h-full rounded-xl bg-neutral-800 p-4 shadow ring-2 ring-green-600 hover:scale-105 transition">
+        <div class="overflow-hidden rounded-lg aspect-video">
+          <img src="img/CapturaTarjetaPers.png" alt="Tarjeta de Presentación"
+            class="w-full h-full object-cover group-hover:scale-105 transition" />
+        </div>
+        <div class="flex flex-col flex-1 mt-4">
+          <h3 class="text-lg font-semibold text-green-400">Tarjeta de Presentación Personal</h3>
+          <p class="mt-2 text-sm text-gray-300 flex-1">
+            Proyecto sencillo con HTML y CSS, hecho para presentarme en el curso Fullstack.
+          </p>
+          <a href="https://juanosuna02.github.io/Mi-Presentacion/" target="_blank"
+            class="mt-3 inline-block text-green-400 hover:text-white hover:underline font-bold">
+            Ver online
+          </a>
+        </div>
+      </article>
+      <article class="group flex flex-col h-full rounded-xl bg-neutral-800 p-4 shadow ring-2 ring-green-600 hover:scale-105 transition">
+        <div class="overflow-hidden rounded-lg aspect-video">
+          <img src="img/CapturaRestaurante.png" alt="Menú de Restaurante" 
+            class="w-full h-full object-cover group-hover:scale-105 transition" />
+        </div>
+        <div class="flex flex-col flex-1 mt-4">
+          <h3 class="text-lg font-semibold text-green-400">Menú de Restaurante</h3>
+          <p class="mt-2 text-sm text-gray-300 flex-1">
+            Sitio simple con platos y precios, simulando el menú de un restaurante argentino, usando HTML y CSS.
+          </p>
+          <a href="https://juanosuna02.github.io/Menu-de-mi-restaurante/" target="_blank"
+            class="mt-3 inline-block text-green-400 hover:text-white hover:underline font-bold">
+            Ver online
+          </a>
+        </div>
+      </article>
+      <article class="group flex flex-col h-full rounded-xl bg-neutral-800 p-4 shadow ring-2 ring-green-600 hover:scale-105 transition">
+        <div class="overflow-hidden rounded-lg aspect-video">
+          <img src="img/CapturaFlex.png" alt="Flexbox Clon: Easy Design Services"
+            class="w-full h-full object-cover group-hover:scale-105 transition" />
+        </div>
+        <div class="flex flex-col flex-1 mt-4">
+          <h3 class="text-lg font-semibold text-green-400">Flexbox Clon: Easy Design Services</h3>
+          <p class="mt-2 text-sm text-gray-300 flex-1">
+            Landing page replicada usando HTML, CSS y Flexbox.
+          </p>
+          <a href="https://juanosuna02.github.io/tp3-flexbox-clon/" target="_blank"
+            class="mt-3 inline-block text-green-400 hover:text-white hover:underline font-bold">
+            Ver online
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="experiencia" class="py-12 max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-400">Experiencia</h2>
-    <ul class="mt-4 text-gray-300">
-      <li>Trabajo </li>
-      <li>Estudios</li>
+    <h2 class="text-center text-3xl font-bold text-green-400">Experiencia</h2>
+    <ul class="mt-8 max-w-3xl mx-auto space-y-4 text-gray-300 list-none">
+      <li class="flex items-center gap-3">
+        <span class="inline-block h-8 w-8 rounded-lg bg-green-700 text-green-200 flex items-center justify-center font-bold">🏢</span>
+        <span><strong>PROCLOR</strong> – Encargado de entregas y logística (2020 - Actualidad). Entrega de pedidos y licitaciones para organismos públicos y privados.</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="inline-block h-8 w-8 rounded-lg bg-green-800 text-green-300 flex items-center justify-center font-bold">💻</span>
+        <span><strong>Curso de Desarrollo Web Full Stack</strong> – (2025 - Presente). Desarrollo web full stack con APIs y bases de datos.</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="inline-block h-8 w-8 rounded-lg bg-green-900 text-green-400 flex items-center justify-center font-bold">🎓</span>
+        <span><strong>UTN Paraná</strong> – Técnico universitario en Programación (2023 - Presente). Estructuras de datos, frontend, backend y metodologías ágiles.</span>
+      </li>
     </ul>
   </section>
 
   <section id="habilidades" class="py-12 max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-400">Habilidades</h2>
-    <ul class="mt-4 text-gray-300">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
+    <h2 class="text-center text-3xl font-bold text-green-400">Habilidades</h2>
+    <div class="mt-8 grid gap-6 md:grid-cols-3 text-center">
+      <div class="rounded-xl bg-neutral-800 p-6 shadow ring-2 ring-green-600 hover:shadow-lg transition">
+        <h3 class="text-green-400 font-semibold flex items-center justify-center gap-2"><span>🖥️</span>Frontend</h3>
+        <ul class="mt-2 space-y-1 text-gray-300 font-mono">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="rounded-xl bg-neutral-800 p-6 shadow ring-2 ring-green-600 hover:shadow-lg transition">
+        <h3 class="text-green-400 font-semibold flex items-center justify-center gap-2"><span>⚙️</span>Herramientas</h3>
+        <ul class="mt-2 space-y-1 text-gray-300 font-mono">
+          <li>Git & GitHub</li>
+          <li>VSCode</li>
+        </ul>
+      </div>
+      <div class="rounded-xl bg-neutral-800 p-6 shadow ring-2 ring-green-600 hover:shadow-lg transition">
+        <h3 class="text-green-400 font-semibold flex items-center justify-center gap-2"><span>🤝</span>Soft Skills</h3>
+        <ul class="mt-2 space-y-1 text-gray-300 font-mono">
+          <li>Trabajo en equipo</li>
+          <li>Comunicación</li>
+          <li>Resolución de problemas</li>
+          <li>Responsabilidad</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="contacto" class="py-12 max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-400">Contacto</h2>
-    <form id="formulario" class="mt-4">
-      <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100" />
-      <input id="email" name="email" type="email" placeholder="Email" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100" />
-      <textarea id="mensaje" name="mensaje" rows="3" placeholder="Mensaje" class="block mb-2 px-2 py-1 bg-neutral-800 text-gray-100"></textarea>
-      <button type="submit" class="bg-green-600 text-white px-4 py-2">Enviar</button>
+    <h2 class="text-center text-3xl font-bold text-green-400">Contacto</h2>
+    <form id="formulario" class="mt-8 max-w-xl mx-auto space-y-4 rounded-xl bg-neutral-800 shadow p-8 ring-2 ring-green-600">
+      <div>
+        <label for="nombre" class="block text-sm font-semibold text-green-300">Nombre</label>
+        <input id="nombre" name="nombre" type="text" minlength="3" required
+          class="mt-1 w-full rounded-lg border border-green-700 bg-neutral-900 px-4 py-2 text-gray-100 shadow-sm focus:border-green-400 focus:ring-4 focus:ring-green-900 transition" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-semibold text-green-300">Correo electrónico</label>
+        <input id="email" name="email" type="email" required
+          class="mt-1 w-full rounded-lg border border-green-700 bg-neutral-900 px-4 py-2 text-gray-100 shadow-sm focus:border-green-400 focus:ring-4 focus:ring-green-900 transition" />
+      </div>
+      <div>
+        <label for="mensaje" class="block text-sm font-semibold text-green-300">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" minlength="10" required
+          class="mt-1 w-full rounded-lg border border-green-700 bg-neutral-900 px-4 py-2 text-gray-100 shadow-sm focus:border-green-400 focus:ring-4 focus:ring-green-900 transition"></textarea>
+      </div>
+      <button type="submit"
+        class="w-full rounded-lg bg-green-600 px-5 py-3 text-white font-bold shadow hover:bg-green-700 transition-transform hover:scale-105"
+        id="btnEnviar">
+        Enviar
+      </button>
     </form>
   </section>
 
   <footer class="mt-20 border-t border-green-700 bg-neutral-950 text-green-400">
-    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-center">
-      <p class="text-green-400 text-sm">© 2025 Juan Cruz Fernandez Osuna</p>
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-green-400 text-sm">© 2025 Juan Cruz Fernandez Osuna — Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/JuanOsuna02" target="_blank" class="text-green-400 hover:text-white hover:underline">GitHub</a>
+        <a href="CV_Juan_Cruz_Fernandez_Osuna.pdf" download class="text-green-300 hover:text-white hover:underline">Descargar CV</a>
+      </div>
     </div>
+    <script src="/js/app.js"></script>
   </footer>
 </body>
