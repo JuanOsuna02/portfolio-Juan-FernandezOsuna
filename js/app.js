@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Scroll suave para navegar por las secciones de la pagina
   let links = document.querySelectorAll('a[href^="#"]');
   links.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -13,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
   let form = document.getElementById("formulario");
   let boton = document.getElementById("btnEnviar");
 
+  // Resetear color del botón ENVIAR al escribir en cualquier campo
+  ["nombre", "email", "mensaje"].forEach(function(id) {
+    let campo = document.getElementById(id);
+    if (campo) {
+      campo.addEventListener("input", function () {
+        boton.classList.remove("bg-red-600", "hover:bg-red-700");
+        boton.classList.add("bg-green-600", "hover:bg-green-700");
+      });
+    }
+  });
+// Valvidación del formulario, simulando envío y notificando errores
   if (form && boton) {
     form.addEventListener("submit", function (e) {
       let nombre = document.getElementById("nombre").value.trim();
@@ -34,15 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         boton.classList.remove("bg-green-600", "hover:bg-green-700");
         boton.classList.add("bg-red-600", "hover:bg-red-700");
-        alert(" ¡ERROR! Revisá estos campos:\n" + errores.join("\n"));
-        form.scrollIntoView({ behavior: "smooth" });
+        alert("¡ERROR! Revisá estos campos:\n" + errores.join("\n"));
       } else {
         e.preventDefault();
         boton.classList.remove("bg-red-600", "hover:bg-red-700");
         boton.classList.add("bg-green-600", "hover:bg-green-700");
         alert("¡Mensaje enviado! (Simulacion)");
         form.reset();
-        form.scrollIntoView({ behavior: "smooth" });
       }
     });
   }
