@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Scroll suave para navegar por las secciones de la pagina
+    // Scroll suave para navegar al clickear una seccion de la pagina
   let links = document.querySelectorAll('a[href^="#"]');
   links.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -24,6 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+  // Menú hamburguesa (Es solo para celulares y/o tablets, se cierra automáticamente al seleccionar una seccion)
+  var menuBtn = document.getElementById("menuBtn");
+  var mobileMenu = document.getElementById("mobileMenu");
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = function () {
+      mobileMenu.classList.toggle("hidden");
+    };
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+      link.onclick = function () {
+        mobileMenu.classList.add("hidden");
+      };
+    });
+  }
 // Valvidación del formulario, simulando envío y notificando errores
   if (form && boton) {
     form.addEventListener("submit", function (e) {
