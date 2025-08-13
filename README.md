@@ -103,7 +103,7 @@ portfolio/
    - VSCode **Live Server**, o  
    - `python -m http.server 5500` → `http://localhost:5500`
 
-### Despliegue (recomendado)
+### Despliegue
 **GitHub Pages**  
 Settings → Pages → *Deploy from branch* → `main` → `/root` → **Save**.
 
